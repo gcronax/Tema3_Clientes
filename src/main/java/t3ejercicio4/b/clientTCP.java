@@ -2,6 +2,7 @@ package t3ejercicio4.b;
 
 import java.io.*;
 import java.net.Socket;
+import java.util.List;
 
 public class clientTCP {
     public static void main(String[] args) {
@@ -23,7 +24,8 @@ public class clientTCP {
             OutputStream outputStream = socket.getOutputStream();
             PrintWriter out = new PrintWriter(outputStream,
                     true);
-            out.println("Hola, servidor!");
+            Float respuesta=3F;
+            out.println(respuesta);
             socket.close();
         } catch (IOException e) {
             e.printStackTrace();
